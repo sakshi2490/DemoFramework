@@ -11,17 +11,17 @@ import com.demo.qa.pages.Signonpage;
 
 public class SignOnpagetest extends Testbase {
 	Signonpage signonpage;
-	Homepage homepage;
+	Homepage homepage; // homepage class reference
 	
 
-	public SignOnpagetest() {
-		super();
+	public SignOnpagetest() {  //constructor of test class
+		super(); //super class constructor will be called here
 	}
 
 	@BeforeMethod
 	public void setUp() {
-		Testbase.initialization();
-		signonpage = new Signonpage();
+		Testbase.initialization(); //initialization method from base class will be called here
+		signonpage = new Signonpage(); //create object of signon page class
 
 	}
 

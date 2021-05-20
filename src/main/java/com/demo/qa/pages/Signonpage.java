@@ -21,20 +21,22 @@ public class Signonpage extends Testbase
          @FindBy(linkText= "REGISTER")
          WebElement register;
          
+         //initialize the page objects
          public Signonpage() {
          PageFactory.initElements(driver, this);
          }
-         //Actions
+         
+         //Actions or features of signon screen
          
          public String validateSignonpagetitle(){
-        	 return driver.getTitle();
+        	 return driver.getTitle(); // this method will return title
          }
          
          public Homepage Signon(String un, String pwd) {
-        	 userName.sendKeys(un);
-        	 password.sendKeys(pwd);
+        	 userName.sendKeys(un); // userName already defined in base class
+        	 password.sendKeys(pwd);  // password already defined in base class
         	 submitbtn.click();
-        	 return new Homepage();
+        	 return new Homepage();  // it will return homepage class object
          
          
 }
